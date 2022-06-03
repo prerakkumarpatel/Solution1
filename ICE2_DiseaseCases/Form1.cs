@@ -1,6 +1,7 @@
 ﻿// TODO: comment Header
 //Prerakkumar Patel
 //100846056
+// git :    https://github.com/prerakkumarpatel/Solution1/tree/master/ICE2_DiseaseCases
 // TODO: add regions to organize your code
 
 using System;
