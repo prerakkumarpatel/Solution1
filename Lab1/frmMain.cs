@@ -6,6 +6,13 @@
  */
 
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Lab1
@@ -28,7 +35,7 @@ namespace Lab1
         Double averageAttendees = 0;
         Double totalAttendees = 0;
         int time = 1;
-
+        
         #endregion
 
         #region UI events
@@ -44,7 +51,7 @@ namespace Lab1
 
             inputValue = ValidateDecimal(txtAttendeesEntry.Text);
             if (inputValue > 0 && time <= 10)
-            {
+            { 
                 lbxAttendeesList.Items.Add(inputValue);
                 totalAttendees += inputValue;
                 averageAttendees = Math.Round((totalAttendees / time), 2);
@@ -58,7 +65,9 @@ namespace Lab1
                 }
                
                 txtAttendeesEntry.Clear();
-                
+
+
+
             }
             //error message box
             else if (time > 10)
@@ -75,16 +84,16 @@ namespace Lab1
 
                 }
 
-            }
+            }   
             else
 
-            {
-                MessageBox.Show("Enter valid number of attendees");
-                txtAttendeesEntry.SelectAll();
-                txtAttendeesEntry.Focus();
-            }
-
-
+                {
+                    MessageBox.Show("Enter valid number of attendees");
+                    txtAttendeesEntry.SelectAll();
+                    txtAttendeesEntry.Focus();
+                }
+          
+ 
 
         }
         /// <summary>
@@ -142,6 +151,8 @@ namespace Lab1
             totalAttendees = 0;
 
         }
+        
+
     }
     #endregion
 }
