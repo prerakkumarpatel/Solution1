@@ -23,6 +23,9 @@ namespace lab2
             InitializeComponent();
             lblAverageGrade.Text = "";
             lblAverageGradePoint.Text = "";
+            float[] GPAScore;
+            float[] GPA;
+
 
         }
         TextBox[] GradeTextboxes;
@@ -91,7 +94,9 @@ namespace lab2
         private void tbxInputGrade6_Leave(object sender, EventArgs e)
         {
             if (isInRange(tbxInputGrade6.Text))
+            {
                 lblError.Text = "ERROR: YOU ARE AWESOME";
+            }
             else
             {
                 lblError.Text = " Please Enter valid grade between 1 to 100 ";

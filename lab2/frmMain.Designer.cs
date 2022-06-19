@@ -219,7 +219,6 @@ namespace lab2
             // cbxCourseInput6
             // 
             this.cbxCourseInput6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbxCourseInput6.DisplayMember = "p";
             this.cbxCourseInput6.FormattingEnabled = true;
             this.cbxCourseInput6.Items.AddRange(new object[] {
             "NetD",
@@ -237,7 +236,6 @@ namespace lab2
             // cbxCourseInput5
             // 
             this.cbxCourseInput5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbxCourseInput5.DisplayMember = "p";
             this.cbxCourseInput5.FormattingEnabled = true;
             this.cbxCourseInput5.Items.AddRange(new object[] {
             "NetD",
@@ -255,11 +253,14 @@ namespace lab2
             // cbxCourseInput3
             // 
             this.cbxCourseInput3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbxCourseInput3.DisplayMember = "p";
             this.cbxCourseInput3.FormattingEnabled = true;
             this.cbxCourseInput3.Items.AddRange(new object[] {
             "NetD",
-            ""});
+            "GNED",
+            "Linux",
+            "SysDev",
+            "OOP",
+            "WebDev "});
             this.cbxCourseInput3.Location = new System.Drawing.Point(97, 284);
             this.cbxCourseInput3.Name = "cbxCourseInput3";
             this.cbxCourseInput3.Size = new System.Drawing.Size(152, 33);
@@ -269,7 +270,6 @@ namespace lab2
             // cbxCourseInput4
             // 
             this.cbxCourseInput4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbxCourseInput4.DisplayMember = "p";
             this.cbxCourseInput4.FormattingEnabled = true;
             this.cbxCourseInput4.Items.AddRange(new object[] {
             "NetD",
@@ -287,7 +287,6 @@ namespace lab2
             // cbxCourseInput2
             // 
             this.cbxCourseInput2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbxCourseInput2.DisplayMember = "p";
             this.cbxCourseInput2.FormattingEnabled = true;
             this.cbxCourseInput2.Items.AddRange(new object[] {
             "NetD",
