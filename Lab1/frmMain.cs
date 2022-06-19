@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*Name:Prerakkumar  * 
+ * StudentId : 100846056
+ * Date: June 1 2022
+ *Purpose: group of interconnected logics that calculate average
+ *Github:https://github.com/prerakkumarpatel/Solution1/
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,7 +35,7 @@ namespace Lab1
         Double averageAttendees = 0;
         Double totalAttendees = 0;
         int time = 1;
-
+        
         #endregion
 
         #region UI events
@@ -40,23 +47,24 @@ namespace Lab1
         /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            int inputValue;
+            Double inputValue;
 
             inputValue = ValidateDecimal(txtAttendeesEntry.Text);
-            if (inputValue > 0)
-            {
+            if (inputValue > 0 && time <= 10)
+            { 
                 lbxAttendeesList.Items.Add(inputValue);
                 totalAttendees += inputValue;
-                averageAttendees = (totalAttendees / time);
+                averageAttendees = Math.Round((totalAttendees / time), 2);
                 lblAverageAttendees.Text = "Average Per Hour: " + averageAttendees.ToString();
                 time += 1;
                 lblHour.Text = "Time:" + time + "pm";
-
+                if (time ==11)
                 {
+                    lblHour.Text = "Time:" + (time-1) + "pm";
                     lblAverageAttendees.Text = "Average Per Hour at 10 pm:" + averageAttendees.ToString();
                 }
-
-
+               
+                txtAttendeesEntry.Clear();
 
 
 
@@ -65,21 +73,27 @@ namespace Lab1
             else if (time > 10)
             {
 
+                MessageBox.Show("You reached 10 pm And Event is done and average attendees are :" + averageAttendees);
+                if (MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+                else
                 {
                     SetDefaults();
 
                 }
 
-            }
+            }   
             else
 
-            {
-                MessageBox.Show("Enter valid number of attendees");
-                txtAttendeesEntry.SelectAll();
-                txtAttendeesEntry.Focus();
-            }
-
-
+                {
+                    MessageBox.Show("Enter valid number of attendees");
+                    txtAttendeesEntry.SelectAll();
+                    txtAttendeesEntry.Focus();
+                }
+          
+ 
 
         }
         /// <summary>
@@ -128,15 +142,16 @@ namespace Lab1
         {
             lbxAttendeesList.Items.Clear();
             txtAttendeesEntry.Clear();
+            lbxAttendeesList.Text = "";
             txtAttendeesEntry.Focus();
-            lblAverageAttendees.Text = "";
-            time = 0;
+            lblAverageAttendees.Text = ""; 
+            time = 1;
             lblHour.Text = "Time:" + time + "pm";
             averageAttendees = 0;
             totalAttendees = 0;
 
         }
-
+        
 
     }
     #endregion
