@@ -29,6 +29,7 @@ namespace lab2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblGPA6 = new System.Windows.Forms.Label();
             this.lblGPA5 = new System.Windows.Forms.Label();
             this.lblGPA4 = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@ namespace lab2
             this.lblAverageGradePoint = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
+            this.ttp1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // lblGPA6
@@ -71,6 +73,7 @@ namespace lab2
             this.lblGPA6.TabIndex = 0;
             this.lblGPA6.Text = "label6";
             this.lblGPA6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttp1.SetToolTip(this.lblGPA6, "GPA OF subject");
             // 
             // lblGPA5
             // 
@@ -84,6 +87,7 @@ namespace lab2
             this.lblGPA5.TabIndex = 0;
             this.lblGPA5.Text = "label5";
             this.lblGPA5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttp1.SetToolTip(this.lblGPA5, "GPA OF subject");
             // 
             // lblGPA4
             // 
@@ -97,6 +101,7 @@ namespace lab2
             this.lblGPA4.TabIndex = 0;
             this.lblGPA4.Text = "label4";
             this.lblGPA4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttp1.SetToolTip(this.lblGPA4, "GPA OF subject");
             // 
             // lblGPA3
             // 
@@ -110,6 +115,7 @@ namespace lab2
             this.lblGPA3.TabIndex = 0;
             this.lblGPA3.Text = "label3";
             this.lblGPA3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttp1.SetToolTip(this.lblGPA3, "GPA OF subject");
             // 
             // lblGPA2
             // 
@@ -123,6 +129,7 @@ namespace lab2
             this.lblGPA2.TabIndex = 0;
             this.lblGPA2.Text = "label2";
             this.lblGPA2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttp1.SetToolTip(this.lblGPA2, "GPA OF subject");
             // 
             // lblGPA1
             // 
@@ -136,6 +143,7 @@ namespace lab2
             this.lblGPA1.TabIndex = 0;
             this.lblGPA1.Text = "label1";
             this.lblGPA1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttp1.SetToolTip(this.lblGPA1, "GPA OF subject");
             // 
             // tbxInputGrade6
             // 
@@ -148,6 +156,7 @@ namespace lab2
             this.tbxInputGrade6.Size = new System.Drawing.Size(154, 31);
             this.tbxInputGrade6.TabIndex = 12;
             this.tbxInputGrade6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ttp1.SetToolTip(this.tbxInputGrade6, "Enter Grade to get GPA");
             this.tbxInputGrade6.Leave += new System.EventHandler(this.tbxInputGrade6_Leave);
             // 
             // tbxInputGrade5
@@ -161,6 +170,7 @@ namespace lab2
             this.tbxInputGrade5.Size = new System.Drawing.Size(154, 31);
             this.tbxInputGrade5.TabIndex = 10;
             this.tbxInputGrade5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ttp1.SetToolTip(this.tbxInputGrade5, "Enter Grade to get GPA");
             this.tbxInputGrade5.Leave += new System.EventHandler(this.tbxInputGrade5_Leave);
             // 
             // tbxInputGrade4
@@ -174,6 +184,7 @@ namespace lab2
             this.tbxInputGrade4.Size = new System.Drawing.Size(154, 31);
             this.tbxInputGrade4.TabIndex = 8;
             this.tbxInputGrade4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ttp1.SetToolTip(this.tbxInputGrade4, "Enter Grade to get GPA");
             this.tbxInputGrade4.Leave += new System.EventHandler(this.tbxInputGrade4_Leave);
             // 
             // tbxInputGrade1
@@ -187,6 +198,7 @@ namespace lab2
             this.tbxInputGrade1.Size = new System.Drawing.Size(154, 31);
             this.tbxInputGrade1.TabIndex = 2;
             this.tbxInputGrade1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ttp1.SetToolTip(this.tbxInputGrade1, "Enter Grade to get GPA");
             this.tbxInputGrade1.Leave += new System.EventHandler(this.tbxInputGrade6_Leave);
             this.tbxInputGrade1.MouseLeave += new System.EventHandler(this.tbxInputGrade1_Leave);
             // 
@@ -201,6 +213,7 @@ namespace lab2
             this.tbxInputGrade3.Size = new System.Drawing.Size(154, 31);
             this.tbxInputGrade3.TabIndex = 6;
             this.tbxInputGrade3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ttp1.SetToolTip(this.tbxInputGrade3, "Enter Grade to get GPA");
             this.tbxInputGrade3.Leave += new System.EventHandler(this.tbxInputGrade3_Leave);
             // 
             // tbxInputGrade2
@@ -214,110 +227,127 @@ namespace lab2
             this.tbxInputGrade2.Size = new System.Drawing.Size(154, 31);
             this.tbxInputGrade2.TabIndex = 4;
             this.tbxInputGrade2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ttp1.SetToolTip(this.tbxInputGrade2, "Enter Grade to get GPA");
             this.tbxInputGrade2.Leave += new System.EventHandler(this.tbxInputGrade2_Leave);
             // 
             // cbxCourseInput6
             // 
             this.cbxCourseInput6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxCourseInput6.DisplayMember = "Choose ";
+            this.cbxCourseInput6.Enabled = false;
             this.cbxCourseInput6.FormattingEnabled = true;
             this.cbxCourseInput6.Items.AddRange(new object[] {
-            "NetD",
-            "GNED",
-            "Linux",
-            "SysDev",
+            "NETD",
+            "WEBD",
+            "LINUX",
+            "SYSD",
             "OOP",
-            "WebDev "});
+            "GNED"});
             this.cbxCourseInput6.Location = new System.Drawing.Point(97, 508);
             this.cbxCourseInput6.Name = "cbxCourseInput6";
             this.cbxCourseInput6.Size = new System.Drawing.Size(152, 33);
             this.cbxCourseInput6.TabIndex = 11;
-            this.cbxCourseInput6.Text = "Choose courses";
+            this.cbxCourseInput6.Text = "Choose Subject";
+            this.ttp1.SetToolTip(this.cbxCourseInput6, "Select Subject");
             // 
             // cbxCourseInput5
             // 
             this.cbxCourseInput5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxCourseInput5.DisplayMember = "Choose";
+            this.cbxCourseInput5.Enabled = false;
             this.cbxCourseInput5.FormattingEnabled = true;
             this.cbxCourseInput5.Items.AddRange(new object[] {
-            "NetD",
-            "GNED",
-            "Linux",
-            "SysDev",
+            "NETD",
+            "WEBD",
+            "LINUX",
+            "SYSD",
             "OOP",
-            "WebDev "});
+            "GNED"});
             this.cbxCourseInput5.Location = new System.Drawing.Point(97, 436);
             this.cbxCourseInput5.Name = "cbxCourseInput5";
             this.cbxCourseInput5.Size = new System.Drawing.Size(152, 33);
             this.cbxCourseInput5.TabIndex = 9;
-            this.cbxCourseInput5.Text = "Choose courses";
+            this.cbxCourseInput5.Text = "Choose Subject";
+            this.ttp1.SetToolTip(this.cbxCourseInput5, "Select Subject");
             // 
             // cbxCourseInput3
             // 
             this.cbxCourseInput3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxCourseInput3.Enabled = false;
             this.cbxCourseInput3.FormattingEnabled = true;
             this.cbxCourseInput3.Items.AddRange(new object[] {
-            "NetD",
-            "GNED",
-            "Linux",
-            "SysDev",
+            "NETD",
+            "WEBD",
+            "LINUX",
+            "SYSD",
             "OOP",
-            "WebDev "});
+            "GNED"});
             this.cbxCourseInput3.Location = new System.Drawing.Point(97, 284);
             this.cbxCourseInput3.Name = "cbxCourseInput3";
             this.cbxCourseInput3.Size = new System.Drawing.Size(152, 33);
             this.cbxCourseInput3.TabIndex = 5;
-            this.cbxCourseInput3.Text = "Choose courses";
+            this.cbxCourseInput3.Text = "Choose Subject";
+            this.ttp1.SetToolTip(this.cbxCourseInput3, "Select Subject");
             // 
             // cbxCourseInput4
             // 
             this.cbxCourseInput4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxCourseInput4.DisplayMember = "Choose";
+            this.cbxCourseInput4.Enabled = false;
             this.cbxCourseInput4.FormattingEnabled = true;
             this.cbxCourseInput4.Items.AddRange(new object[] {
-            "NetD",
-            "GNED",
-            "Linux",
-            "SysDev",
+            "",
+            "NETD",
+            "WEBD",
+            "LINUX",
+            "SYSD",
             "OOP",
-            "WebDev "});
+            "GNED"});
             this.cbxCourseInput4.Location = new System.Drawing.Point(97, 364);
             this.cbxCourseInput4.Name = "cbxCourseInput4";
             this.cbxCourseInput4.Size = new System.Drawing.Size(152, 33);
             this.cbxCourseInput4.TabIndex = 7;
-            this.cbxCourseInput4.Text = "Choose courses";
+            this.cbxCourseInput4.Text = "Choose Subject";
+            this.ttp1.SetToolTip(this.cbxCourseInput4, "Select Subject");
             // 
             // cbxCourseInput2
             // 
             this.cbxCourseInput2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxCourseInput2.Enabled = false;
             this.cbxCourseInput2.FormattingEnabled = true;
             this.cbxCourseInput2.Items.AddRange(new object[] {
-            "NetD",
-            "GNED",
-            "Linux",
-            "SysDev",
+            "NETD",
+            "WEBD",
+            "LINUX",
+            "SYSD",
             "OOP",
-            "WebDev "});
+            "GNED"});
             this.cbxCourseInput2.Location = new System.Drawing.Point(97, 212);
             this.cbxCourseInput2.Name = "cbxCourseInput2";
             this.cbxCourseInput2.Size = new System.Drawing.Size(152, 33);
             this.cbxCourseInput2.TabIndex = 3;
-            this.cbxCourseInput2.Text = "Choose courses";
+            this.cbxCourseInput2.Text = "Choose Subject";
+            this.ttp1.SetToolTip(this.cbxCourseInput2, "Select Subject");
             // 
             // cbxCourseInput1
             // 
             this.cbxCourseInput1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbxCourseInput1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cbxCourseInput1.Enabled = false;
             this.cbxCourseInput1.FormattingEnabled = true;
             this.cbxCourseInput1.Items.AddRange(new object[] {
-            "NetD",
-            "GNED",
-            "Linux",
-            "SysDev",
+            "NETD",
+            "WEBD",
+            "LINUX",
+            "SYSD",
             "OOP",
-            "WebDev "});
+            "GNED"});
             this.cbxCourseInput1.Location = new System.Drawing.Point(97, 132);
             this.cbxCourseInput1.Name = "cbxCourseInput1";
             this.cbxCourseInput1.Size = new System.Drawing.Size(152, 33);
             this.cbxCourseInput1.TabIndex = 1;
-            this.cbxCourseInput1.Text = "Choose courses";
+            this.cbxCourseInput1.Text = "Choose Subject";
+            this.ttp1.SetToolTip(this.cbxCourseInput1, "Select Subject");
             // 
             // lblGradePoint
             // 
@@ -374,6 +404,7 @@ namespace lab2
             this.btnCalculate.Size = new System.Drawing.Size(152, 34);
             this.btnCalculate.TabIndex = 13;
             this.btnCalculate.Text = "&Calculate";
+            this.ttp1.SetToolTip(this.btnCalculate, "Calculate button");
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
@@ -384,6 +415,7 @@ namespace lab2
             this.btnReset.Size = new System.Drawing.Size(152, 34);
             this.btnReset.TabIndex = 14;
             this.btnReset.Text = "&Reset";
+            this.ttp1.SetToolTip(this.btnReset, "Reset Button");
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -394,6 +426,7 @@ namespace lab2
             this.btnExit.Size = new System.Drawing.Size(152, 34);
             this.btnExit.TabIndex = 15;
             this.btnExit.Text = "E&xit";
+            this.ttp1.SetToolTip(this.btnExit, "Exit Button");
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -409,6 +442,7 @@ namespace lab2
             this.lblAverageGrade.TabIndex = 45;
             this.lblAverageGrade.Text = "label7";
             this.lblAverageGrade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttp1.SetToolTip(this.lblAverageGrade, "Average grade Score");
             // 
             // lblAverageGradePoint
             // 
@@ -422,6 +456,7 @@ namespace lab2
             this.lblAverageGradePoint.TabIndex = 0;
             this.lblAverageGradePoint.Text = "label8";
             this.lblAverageGradePoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttp1.SetToolTip(this.lblAverageGradePoint, "Average GPA");
             // 
             // label9
             // 
@@ -527,6 +562,7 @@ namespace lab2
         private System.Windows.Forms.Label lblAverageGradePoint;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.ToolTip ttp1;
     }
 }
 
