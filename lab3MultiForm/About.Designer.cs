@@ -34,6 +34,7 @@ namespace lab3
             // 
             // txtInfo
             // 
+            this.txtInfo.Enabled = false;
             this.txtInfo.Location = new System.Drawing.Point(95, 57);
             this.txtInfo.MaximumSize = new System.Drawing.Size(469, 157);
             this.txtInfo.MinimumSize = new System.Drawing.Size(469, 157);

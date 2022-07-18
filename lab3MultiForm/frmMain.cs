@@ -54,6 +54,14 @@ namespace lab3
             DoGridSelectionChange = false;
             dgvOrders.DataSource = null;
             dgvOrders.DataSource = Pizza.pizzas;
+            dgvOrders.Columns[0].Width = 70;
+            dgvOrders.Columns[1].Width = 120;
+            dgvOrders.Columns[2].Width = 120;
+            dgvOrders.Columns[3].Width = 200;
+            dgvOrders.Columns[4].Width =80;
+            dgvOrders.Columns[5].Width = 100;
+            dgvOrders.Columns[6].Width = 80;
+            dgvOrders.Columns[7].Width = 80;
             dgvOrders.ClearSelection();
             DoGridSelectionChange = true;
         }
@@ -87,6 +95,12 @@ namespace lab3
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        /// 
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            About frmAbout = new About();
+            frmAbout.ShowDialog();
+        }
         private void btnRemove_Click(object sender, EventArgs e)
         {
             if (dgvOrders.SelectedRows.Count != 0)
@@ -121,6 +135,7 @@ namespace lab3
             else
                 MessageBox.Show("Please click any order  to RESET");
         }
+
         #endregion
     }
 }

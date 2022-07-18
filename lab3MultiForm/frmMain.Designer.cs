@@ -32,11 +32,6 @@ namespace lab3 {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.dgvOrders = new System.Windows.Forms.DataGridView();
-            this.lblTitleBar = new System.Windows.Forms.Label();
-            this.btnAddNew = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.ttp = new System.Windows.Forms.ToolTip(this.components);
             this.colOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colOrderOf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPizzaType = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +40,12 @@ namespace lab3 {
             this.colSpicy = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.colPremium = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.colPickup = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.lblTitleBar = new System.Windows.Forms.Label();
+            this.btnAddNew = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.ttp = new System.Windows.Forms.ToolTip(this.components);
+            this.btnAbout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,12 +84,102 @@ namespace lab3 {
             this.dgvOrders.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(0)))));
             this.dgvOrders.RowTemplate.Height = 25;
             this.dgvOrders.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOrders.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.dgvOrders.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrders.ShowEditingIcon = false;
             this.dgvOrders.Size = new System.Drawing.Size(957, 498);
             this.dgvOrders.TabIndex = 5;
             this.dgvOrders.VirtualMode = true;
+            // 
+            // colOrder
+            // 
+            this.colOrder.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colOrder.DataPropertyName = "Order";
+            this.colOrder.FillWeight = 60F;
+            this.colOrder.HeaderText = "Order";
+            this.colOrder.MinimumWidth = 6;
+            this.colOrder.Name = "colOrder";
+            this.colOrder.ReadOnly = true;
+            this.colOrder.ToolTipText = "Order Number";
+            this.colOrder.Width = 70;
+            // 
+            // colOrderOf
+            // 
+            this.colOrderOf.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colOrderOf.DataPropertyName = "OrderOf";
+            this.colOrderOf.FillWeight = 60F;
+            this.colOrderOf.HeaderText = "Order Of";
+            this.colOrderOf.MinimumWidth = 6;
+            this.colOrderOf.Name = "colOrderOf";
+            this.colOrderOf.ReadOnly = true;
+            this.colOrderOf.ToolTipText = "Customer Name";
+            this.colOrderOf.Width = 80;
+            // 
+            // colPizzaType
+            // 
+            this.colPizzaType.DataPropertyName = "PizzaType";
+            this.colPizzaType.FillWeight = 80F;
+            this.colPizzaType.HeaderText = "Pizza Type";
+            this.colPizzaType.MinimumWidth = 6;
+            this.colPizzaType.Name = "colPizzaType";
+            this.colPizzaType.ReadOnly = true;
+            this.colPizzaType.ToolTipText = "Type of Pizza";
+            this.colPizzaType.Width = 98;
+            // 
+            // colOrderOn
+            // 
+            this.colOrderOn.DataPropertyName = "OrderOn";
+            this.colOrderOn.FillWeight = 600F;
+            this.colOrderOn.HeaderText = "Order On";
+            this.colOrderOn.MinimumWidth = 6;
+            this.colOrderOn.Name = "colOrderOn";
+            this.colOrderOn.ReadOnly = true;
+            this.colOrderOn.ToolTipText = "Order Date & Time";
+            this.colOrderOn.Width = 600;
+            // 
+            // colQuantity
+            // 
+            this.colQuantity.DataPropertyName = "Quantity";
+            this.colQuantity.FillWeight = 1F;
+            this.colQuantity.HeaderText = "Quantity";
+            this.colQuantity.MinimumWidth = 6;
+            this.colQuantity.Name = "colQuantity";
+            this.colQuantity.ReadOnly = true;
+            this.colQuantity.ToolTipText = "Number Of Pizza";
+            this.colQuantity.Width = 6;
+            // 
+            // colSpicy
+            // 
+            this.colSpicy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colSpicy.DataPropertyName = "IsSpicy";
+            this.colSpicy.FillWeight = 70F;
+            this.colSpicy.HeaderText = "Spicy";
+            this.colSpicy.MinimumWidth = 8;
+            this.colSpicy.Name = "colSpicy";
+            this.colSpicy.ReadOnly = true;
+            this.colSpicy.Width = 70;
+            // 
+            // colPremium
+            // 
+            this.colPremium.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colPremium.DataPropertyName = "IsPremium";
+            this.colPremium.FillWeight = 70F;
+            this.colPremium.HeaderText = "Premium";
+            this.colPremium.MinimumWidth = 8;
+            this.colPremium.Name = "colPremium";
+            this.colPremium.ReadOnly = true;
+            this.colPremium.Width = 70;
+            // 
+            // colPickup
+            // 
+            this.colPickup.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colPickup.DataPropertyName = "IsPickup";
+            this.colPickup.FillWeight = 70F;
+            this.colPickup.HeaderText = "Pickup";
+            this.colPickup.MinimumWidth = 8;
+            this.colPickup.Name = "colPickup";
+            this.colPickup.ReadOnly = true;
+            this.colPickup.Width = 70;
             // 
             // lblTitleBar
             // 
@@ -148,97 +239,17 @@ namespace lab3 {
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // colOrder
+            // btnAbout
             // 
-            this.colOrder.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colOrder.DataPropertyName = "Order";
-            this.colOrder.FillWeight = 60F;
-            this.colOrder.HeaderText = "Order";
-            this.colOrder.MinimumWidth = 6;
-            this.colOrder.Name = "colOrder";
-            this.colOrder.ReadOnly = true;
-            this.colOrder.ToolTipText = "Order Number";
-            this.colOrder.Width = 70;
-            // 
-            // colOrderOf
-            // 
-            this.colOrderOf.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colOrderOf.DataPropertyName = "OrderOf";
-            this.colOrderOf.HeaderText = "Order Of";
-            this.colOrderOf.MinimumWidth = 6;
-            this.colOrderOf.Name = "colOrderOf";
-            this.colOrderOf.ReadOnly = true;
-            this.colOrderOf.ToolTipText = "Customer Name";
-            this.colOrderOf.Width = 332;
-            // 
-            // colPizzaType
-            // 
-            this.colPizzaType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colPizzaType.DataPropertyName = "PizzaType";
-            this.colPizzaType.FillWeight = 80F;
-            this.colPizzaType.HeaderText = "Pizza Type";
-            this.colPizzaType.MinimumWidth = 6;
-            this.colPizzaType.Name = "colPizzaType";
-            this.colPizzaType.ReadOnly = true;
-            this.colPizzaType.ToolTipText = "Type of Pizza";
-            this.colPizzaType.Width = 90;
-            // 
-            // colOrderOn
-            // 
-            this.colOrderOn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colOrderOn.DataPropertyName = "OrderOn";
-            this.colOrderOn.FillWeight = 250F;
-            this.colOrderOn.HeaderText = "Order On";
-            this.colOrderOn.MinimumWidth = 6;
-            this.colOrderOn.Name = "colOrderOn";
-            this.colOrderOn.ReadOnly = true;
-            this.colOrderOn.ToolTipText = "Order Date & Time";
-            this.colOrderOn.Width = 260;
-            // 
-            // colQuantity
-            // 
-            this.colQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colQuantity.DataPropertyName = "Quantity";
-            this.colQuantity.FillWeight = 50F;
-            this.colQuantity.HeaderText = "Quantity";
-            this.colQuantity.MinimumWidth = 6;
-            this.colQuantity.Name = "colQuantity";
-            this.colQuantity.ReadOnly = true;
-            this.colQuantity.ToolTipText = "Number Of Pizza";
-            this.colQuantity.Width = 60;
-            // 
-            // colSpicy
-            // 
-            this.colSpicy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colSpicy.DataPropertyName = "IsSpicy";
-            this.colSpicy.FillWeight = 70F;
-            this.colSpicy.HeaderText = "Spicy";
-            this.colSpicy.MinimumWidth = 8;
-            this.colSpicy.Name = "colSpicy";
-            this.colSpicy.ReadOnly = true;
-            this.colSpicy.Width = 70;
-            // 
-            // colPremium
-            // 
-            this.colPremium.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colPremium.DataPropertyName = "IsPremium";
-            this.colPremium.FillWeight = 70F;
-            this.colPremium.HeaderText = "Premium";
-            this.colPremium.MinimumWidth = 8;
-            this.colPremium.Name = "colPremium";
-            this.colPremium.ReadOnly = true;
-            this.colPremium.Width = 70;
-            // 
-            // colPickup
-            // 
-            this.colPickup.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colPickup.DataPropertyName = "IsPickup";
-            this.colPickup.FillWeight = 70F;
-            this.colPickup.HeaderText = "Pickup";
-            this.colPickup.MinimumWidth = 8;
-            this.colPickup.Name = "colPickup";
-            this.colPickup.ReadOnly = true;
-            this.colPickup.Width = 70;
+            this.btnAbout.Location = new System.Drawing.Point(402, 649);
+            this.btnAbout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(200, 48);
+            this.btnAbout.TabIndex = 6;
+            this.btnAbout.Text = "A&bout";
+            this.ttp.SetToolTip(this.btnAbout, "to get program info");
+            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // frmMain
             // 
@@ -249,6 +260,7 @@ namespace lab3 {
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnRemove;
             this.ClientSize = new System.Drawing.Size(1540, 705);
+            this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAddNew);
@@ -274,6 +286,7 @@ namespace lab3 {
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.ToolTip ttp;
+        private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.DataGridViewTextBoxColumn colOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn colOrderOf;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPizzaType;

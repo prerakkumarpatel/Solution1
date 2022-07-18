@@ -151,6 +151,7 @@ namespace lab3
             // 
             this.dtpOrderOn.Location = new System.Drawing.Point(148, 221);
             this.dtpOrderOn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpOrderOn.MinDate = new System.DateTime(2022, 7, 19, 0, 0, 0, 0);
             this.dtpOrderOn.Name = "dtpOrderOn";
             this.dtpOrderOn.Size = new System.Drawing.Size(232, 31);
             this.dtpOrderOn.TabIndex = 4;
