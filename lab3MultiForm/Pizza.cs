@@ -85,22 +85,21 @@ namespace lab3
             IsSpicy = false;
         }
 
-        public void ChangeUnit(int newQuantity)
-        {
-            Quantity = newQuantity;
-        }
 
         #endregion
 
         #region Static Methods
-
+        /// <summary>
+        /// sample of orders
+        /// </summary>
+        /// <returns></returns>
         public static List<Pizza> GetSamplePizzas()
         {
             List<Pizza> returnList = new List<Pizza>();
 
-            returnList.Add(new Pizza("Patel", "Veggie", new DateTime(2022, 07, 16, 12,00,00), 2, false,
+            returnList.Add(new Pizza("Patel", "Veggie", new DateTime(2022, 07, 23, 12,00,00), 2, false,
                         false ,true));
-            returnList.Add(new Pizza("ankit", "italian", new DateTime(2022, 07, 15,11,24,00), 3, false,
+            returnList.Add(new Pizza("ankit", "italian", new DateTime(2022, 07, 23,11,24,00), 3, false,
                         true, true));
             returnList.Add(new Pizza("parth", "herb", new DateTime(2022, 07, 22 ,10,20,00), 1, true,
                                     false, false)); ;
@@ -108,12 +107,11 @@ namespace lab3
             return returnList;
         }
 
-        public static void ChangeQuantity(int order, int  newQuantity)
-        {
-            Pizza pizza = FindPizza(order);
-            pizza.Quantity = newQuantity;
-        }
-
+        /// <summary>
+        /// serch for pizza
+        /// </summary>
+        /// <param name="order"></param>
+        /// <returns></returns>
         public static Pizza FindPizza(int order)
         {
             return pizzas.Find(p=> p.Order == order);

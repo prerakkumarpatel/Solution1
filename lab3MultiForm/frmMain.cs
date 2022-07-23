@@ -28,10 +28,14 @@ namespace lab3
             InitializeComponent();
         }
 
-        #region GLOBAL VARS
+        #region GLOBAL VAR s
+        /// <summary>
+        /// global variable
+        /// </summary>
         List<String> PizzaType = new List<String>();
         public Boolean DoGridSelectionChange = false;
         #endregion
+
 
         #region EVENT HANDLERS
         /// <summary>
@@ -48,7 +52,9 @@ namespace lab3
         #endregion
 
         #region CUSTOM METHODS
-
+        /// <summary>
+        /// function that update datasource
+        /// </summary>
         public void UpdateDataGrid()
         {
             DoGridSelectionChange = false;
@@ -91,16 +97,22 @@ namespace lab3
         }
 
         /// <summary>
-        /// remove selected pizza
+        /// about form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        /// 
         private void btnAbout_Click(object sender, EventArgs e)
         {
             About frmAbout = new About();
             frmAbout.ShowDialog();
         }
+        /// <summary>
+        /// remove selected pizza
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+
         private void btnRemove_Click(object sender, EventArgs e)
         {
             if (dgvOrders.SelectedRows.Count != 0)
@@ -116,13 +128,14 @@ namespace lab3
             else
                 MessageBox.Show("Please click any order  to REMOVE");
         }
+
         /// <summary>
         /// reset the pizza
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnReset_Click(object sender, EventArgs e)
-        {   if(dgvOrders.SelectedRows.Count != 0)
+        {   if(dgvOrders.SelectedRows.Count == 1)
             {
                 int orderID = int.Parse(dgvOrders.SelectedRows[0].Cells[0].Value.ToString());
                 Editor frmEditor = new Editor(orderID);

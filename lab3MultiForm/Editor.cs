@@ -8,12 +8,6 @@ https://github.com/prerakkumarpatel/Solution1
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace lab3
@@ -22,15 +16,24 @@ namespace lab3
     {
 
         #region Global Vars
+        /// <summary>
+        /// global variable
+        /// </summary>
         List<String> PizzaType = new List<String>();
         int OrderID = 0;
         #endregion
 
+        /// <summary>
+        /// editor constructor
+        /// </summary>
         public Editor()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// editor constructor parameterized
+        /// </summary>
+        /// <param name="orderID"></param>
         public Editor(int orderID)
         {
             InitializeComponent();
@@ -38,7 +41,11 @@ namespace lab3
             nudOrder.Enabled = false;
 
         }
-
+        /// <summary>
+        /// function when form load  
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Editor_Load(object sender, EventArgs e)
         {
             PopulatePizzaType();
@@ -55,6 +62,9 @@ namespace lab3
         }
 
         #region Custom Methods
+        /// <summary>
+        /// to poppup pizza type
+        /// </summary>
         private void PopulatePizzaType()
         {
             PizzaType.Add("Veg");
@@ -68,7 +78,9 @@ namespace lab3
             PizzaType.Add("DietPizza");
             PizzaType.Add("Masroom");
         }
-
+        /// <summary>
+        /// to set all default values
+        /// </summary>
         private void SetDefaults()
         {
             txtOrderOf.Clear();
@@ -80,6 +92,10 @@ namespace lab3
             chkIsPickup.Checked = false;
             chkIsSpicy.Checked = false;
         }
+        /// <summary>
+        /// to popup pizza details
+        /// </summary>
+        /// <param name="p"></param>
         private void PopulatePizza(Pizza p)
         {
             this.txtOrderOf.Text = p.OrderOf;
@@ -93,12 +109,20 @@ namespace lab3
         }
 
         #endregion
-
+        /// <summary>
+        /// reset function
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReset_Click(object sender, EventArgs e)
         {
             SetDefaults();
         }
-
+        /// <summary>
+        /// save function 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
             Pizza piz = new Pizza();
