@@ -30,7 +30,6 @@ namespace lab3 {
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.dgvOrders = new System.Windows.Forms.DataGridView();
             this.colOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colOrderOf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -256,7 +255,7 @@ namespace lab3 {
             this.AcceptButton = this.btnAddNew;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::lab3MultiForm.Properties.Resources.pizzaback;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnRemove;
             this.ClientSize = new System.Drawing.Size(1540, 705);
