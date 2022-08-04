@@ -112,28 +112,50 @@ namespace lab4
             OpenFileMethod();
         }
         private void OpenFileMethod()
-        {
-            OpenFileDialog openfiledialog = new OpenFileDialog();
-            openfiledialog.Filter = "Text Files (*.txt)|*.txt";
-            DialogResult result = openfiledialog.ShowDialog();
-            if (result == DialogResult.OK)
+        {   if (!isFileDirty)
             {
-
-                currentOpenFileName = openfiledialog.FileName;
-                currentOpenFilePath = Path.GetFullPath(currentOpenFileName);
-                if (Path.GetExtension(openfiledialog.FileName) == ".txt")
+                OpenFileDialog openfiledialog = new OpenFileDialog();
+                openfiledialog.Filter = "Text Files (*.txt)|*.txt";
+                DialogResult result = openfiledialog.ShowDialog();
+                if (result == DialogResult.OK)
                 {
-                    FileStream fs = new FileStream(currentOpenFileName, FileMode.Open, FileAccess.Read);
-                    StreamReader sr = new StreamReader(fs);
-                    //Read the contents of the file into a stream
-                    tbxMain.Text = sr.ReadToEnd();
-                    sr.Close();
-                    fs.Close();
+
+                    currentOpenFileName = openfiledialog.FileName;
+                    currentOpenFilePath = Path.GetFullPath(currentOpenFileName);
+                    if (Path.GetExtension(openfiledialog.FileName) == ".txt")
+                    {
+                        FileStream fs = new FileStream(currentOpenFileName, FileMode.Open, FileAccess.Read);
+                        StreamReader sr = new StreamReader(fs);
+                        //Read the contents of the file into a stream
+                        tbxMain.Text = sr.ReadToEnd();
+                        sr.Close();
+                        fs.Close();
+                    }
+                    this.Text = Path.GetFileName(openfiledialog.FileName) + " - Notepad by Prerak"; //file ka caption ma name dna jo b open kry
+                    isFileAlreadySave = true;
+                    isFileDirty = false;
+                    lblFileStatus.Text = "";
+                    messagetoolStripStatusLabel.Text = currentOpenFileName + " File is Opened !";
                 }
-                this.Text = Path.GetFileName(openfiledialog.FileName) + " - Notepad by Prerak"; //file ka caption ma name dna jo b open kry
+            }else
+            {
+                if (isFileDirty)
+                {
+                    DialogResult result = MessageBox.Show("Do you want to save changes ? ", "File Save", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    switch (result)
+                    {
+                        case DialogResult.Yes:
+                            save(currentOpenFilePath);
+                            break;
+                        case DialogResult.No:
+                            clearScreen();
+                            break;
+                        case DialogResult.Cancel:
+                            break;
+                    }
+                    }
                 isFileAlreadySave = true;
                 isFileDirty = false;
-                messagetoolStripStatusLabel.Text = currentOpenFileName + " File is Opened !";
             }
         }
         /// <summary>
@@ -251,8 +273,17 @@ namespace lab4
             isFileDirty = true;
         }
         #endregion
-
-
+        #region
+        /// <summary>
+        /// help  about page 
+        /// </summary>
+        public void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+                About frmAbout = new About();
+                frmAbout.ShowDialog();
+            
+        }
+        #endregion
 
         #region Custom Function
         /// <summary>
