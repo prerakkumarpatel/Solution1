@@ -2,7 +2,7 @@
  * 100846056
  * August 2 ,2022
  * lab4 text editor
- * github: https://github.com/prerakkumarpatel/Solution1
+ * github: https://github.com/prerakkumarpatel/Solution1/tree/master/lab4
  */
 using System;
 using System.Windows.Forms;
