@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmICE1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmICE3Calculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmICE3Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmICE4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmLab1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmLab2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmTextEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmPizza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmPizzaAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmPizzaEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
